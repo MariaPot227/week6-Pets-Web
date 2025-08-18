@@ -16,17 +16,33 @@ function displayPet(pet) {
 
 function showAllPets() {
   let container = document.getElementById("pet-list");
+  container.innerHTML = "";
 
   pets.forEach((pet) => {
     container.innerHTML += displayPet(pet);
   });
 }
 
-showAllPets();
-
 function adoptPet(petName) {
-    for()
 
-  
-  
+    /*
+    for (let i = 0; i < pets.length; i++) {
+        if (pets[i].name === petName) {
+            pets[i].adopted = true;
+            break; 
+        }
+    }
+*/
+
+    for (let pet of pets) {
+        if (pet.name === petName) {
+            pet.adopted = true;
+            break;
+        }
+    }
+
+    
+    showAllPets();
 }
+adoptPet("Garfield");
+showAllPets();
