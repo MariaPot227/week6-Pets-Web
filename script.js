@@ -21,6 +21,12 @@ function showAllPets() {
   pets.forEach((pet) => {
     container.innerHTML += displayPet(pet);
   });
+
+  for(const pet of pets)
+  {
+
+  }
+
 }
 
 function adoptPet(petName) {
